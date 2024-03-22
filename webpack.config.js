@@ -1,5 +1,4 @@
 const path = require("path");
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -9,11 +8,4 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'jbvalidator.min.js'
     },
-    plugins: [
-        new CopyPlugin({
-            patterns: [
-                { from: 'src/lang', to: 'lang' },
-            ],
-        }),
-    ],
 };

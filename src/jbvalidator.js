@@ -1,5 +1,6 @@
 import {
   formatBytes,
+  getFileExtensions,
   getFileExtensionsFromMimeTypes,
   isMimeTypeMatching,
 } from './helpers';
@@ -377,13 +378,13 @@ import {
 
       fileType: function (el) {
         if (hasAttr(el, 'type', 'file')) {
-          const mimes = $(el).attr('accept').split(/,\s*/);
-          const extensions = getFileExtensionsFromMimeTypes(mimes);
+          const accept = $(el).attr('accept').split(/,\s*/);
+          const extensions = getFileExtensions(accept);
 
           for (let i = 0; i < el.files.length; i++) {
             const mime = el.files[i].type;
 
-            if (!isMimeTypeMatching(mime, mimes)) {
+            if (!isMimeTypeMatching(mime, accept)) {
               return errorMessages.fileType.sprintf(
                 extensions.length ? ' (' + extensions.join(', ') + ')' : ''
               );

@@ -13,7 +13,7 @@ jbvalidator is a fresh new jQuery based form validation plugin that is created f
 ### Installation
 
 ```
-npm i @emretulek/jbvalidator
+npm i jbvalidator
 ```
 Or grab from jsdelivr CDN :
 ```html

@@ -386,7 +386,7 @@ import {
 
             if (!isMimeTypeMatching(mime, accept)) {
               return errorMessages.fileType.sprintf(
-                extensions.length ? ' (' + extensions.join(', ') + ')' : ''
+                extensions.length ? ' (.' + extensions.join(', .') + ')' : ''
               );
             }
           }

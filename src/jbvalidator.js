@@ -1,7 +1,6 @@
 import {
   formatBytes,
   getFileExtensions,
-  getFileExtensionsFromMimeTypes,
   isMimeTypeMatching,
 } from './helpers';
 
@@ -89,7 +88,7 @@ import {
           'Veuillez réduire le texte à %s caractère(s) ou moins (vous utilisez actuellement %s caractère(s)).',
         tooShort:
           'Veuillez saisir %s caractère(s) au minimum (vous utilisez actuellement %s caractère(s)).',
-        patternMismatch: 'Veuillez respecter le format attendu. %s',
+        patternMismatch: 'Veuillez respecter le format attendu.',
         badInput: {
           number: 'Veuillez saisir un nombre.',
         },
